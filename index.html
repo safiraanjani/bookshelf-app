@@ -1,0 +1,86 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ruang Sastra</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Body -->
+<body>
+  <!-- Header -->
+  <header class="header">
+      <h1 class="header_title">Ruang Sastra</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="form_data_buku">
+      <h2>Masukkan Data Buku</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" type="text" required>
+        </div>      
+        <div class="input">
+          <label for="inputBookID">ID Buku</label>
+          <input id="inputBookID" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun Terbit</label>
+          <input id="inputBookYear" type="number" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" type="checkbox">
+        </div>
+        <button id="bookSubmit" type="submit">Masukkan Buku ke rak <span>Belum selesai dibaca</span></button>
+      </form>
+    </section>
+
+    <section class="search">
+      <h2>Cari Data Buku</h2>
+      <form id="searchBook">
+        <label for="searchBookTitle">Judul</label>
+        <input id="searchBookTitle" type="text">
+        <button id="searchSubmit" type="submit">Cari</button>
+      </form>
+    </section>
+
+    <div class="container">
+      <section class="perpustakaan">
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList" class="list_buku">
+        </div>
+      </section>
+
+      <section class="perpustakaan">
+        <h2>Telah selesai dibaca</h2>
+        <div id="completeBookshelfList" class="list_buku">
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <!-- JS File -->
+  <script src="main.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Safira Anjani</span></strong>. All Rights Reserved
+    </div>
+</footer>
+</html>
